@@ -1,6 +1,14 @@
 # Student Support & Ticket Management
 
-Assignment 4 from the Edumerge Product Engineering brief. This is a complete deployable prototype for managing student administrative support requests across fees, attendance, ID cards, documents, certificates, and other college operations.
+Assignment 4 from the Edumerge Product Engineering brief. This is a complete deployable prototype for managing student administrative support requests across fees, attendance, ID cards, documents, certificates, and other college operations. The project includes role-based workflows, SLA visibility, ticket ownership, activity history, and deployment documentation.
+
+
+## Live Deployment
+
+- Frontend: https://studentsupportticketsystm.vercel.app/
+- Backend API: https://student-support-ticket-systm.onrender.com
+
+The frontend is deployed on Vercel, the backend is deployed on Render, and PostgreSQL is hosted on Neon.
 
 ## Tech Stack
 
@@ -116,6 +124,14 @@ Password@123
 5. Add environment variable:
    - `VITE_API_URL=https://your-render-backend-url.onrender.com/api`
 
+
+## Submission Notes
+
+- The repository includes an AI usage disclosure in `AI_USAGE_REPORT.md`.
+- Demo credentials are listed in the Demo Accounts section for student, staff, and manager access.
+- The deployed application was validated by logging in, creating a ticket, updating workflow fields, adding comments, and checking dashboard metrics.
+- Environment secrets such as database URL and JWT secret should be configured only in Render/Vercel environment settings and should not be committed to the repository.
+
 ## Product Assumptions
 
 - Students can create tickets and see only their own tickets.
@@ -147,3 +163,5 @@ POST   /api/tickets/:id/comments
 POST   /api/tickets/:id/resolve
 GET    /api/dashboard
 ```
+
+
